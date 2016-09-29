@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-
 const API_URL = 'https://api.transferwise.com/v1/comparisons';
 const AUTH_HEADERS = {
   'Content-type': 'application/json',
