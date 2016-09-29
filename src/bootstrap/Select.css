@@ -1,0 +1,9 @@
+.Select {
+  display: inline-block;
+  position: relative;
+}
+
+.Select .dropdown-toggle {
+  font-weight: normal;
+  display: inline-block;
+}

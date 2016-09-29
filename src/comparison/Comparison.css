@@ -1,0 +1,90 @@
+.Comparison a {
+  text-decoration: none;
+}
+
+.Comparison .font-weight-normal {
+  font-weight: normal;
+}
+
+.Comparison .hidden-text {
+  position: absolute;
+  right: 0;
+}
+
+.Comparison td,
+.Comparison th {
+  border: 0 !important;
+}
+
+.Comparison .progress {
+  cursor: help;
+  margin: 0;
+}
+
+.Comparison th,
+.Comparison table {
+  border-bottom: 1px solid #e2e6e8 !important;
+}
+
+.Comparison .progress {
+  display: inline-block;
+  background-color: #f53636 !important;
+}
+
+.Comparison .progress-bar {
+  background-color: #2F4366 !important;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.Comparison .no-text-wrap {
+    display: block;
+    white-space: nowrap !important;
+}
+
+.Comparison .popover {
+    max-width: 350px !important;
+}
+
+.Comparison .progress {
+    color: white;
+    line-height: 32px;
+}
+
+@media (max-width: 543px) {
+  .Comparison .provider-name {
+    width: 120px;
+  }
+  .Comparison .amount-received {
+    width: 150px;
+    background-color: #f2f5f7;
+  }
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+  .Comparison .provider-name {
+    width: 180px;
+  }
+  .Comparison .amount-received {
+    width: 200px;
+    background-color: #f2f5f7;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Comparison .provider-name {
+    width: 150px;
+  }
+  .Comparison .amount-received {
+    width: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Comparison .provider-name {
+    width: 250px;
+  }
+  .Comparison .amount-received {
+    width: 180px;
+  }
+}
