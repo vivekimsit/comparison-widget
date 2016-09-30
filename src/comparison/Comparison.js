@@ -43,26 +43,30 @@ export default class Comparison extends Component {
     providersFor(this.props.source, this.props.target, amount)
       .then(response => response.json())
       .then(json => {
+        console.log(json);
         const providers = this.props.filter ?
-          json.providerRates.filter(p => p.name.includes(this.props.filter) || p.name === 'TransferWise') :
-          json.providerRates;
+          json.providers.filter(p => p.name.includes(this.props.filter) || p.name === 'TransferWise') :
+          json.providers;
 
         const maxFee = this.maxFee(providers, amount);
 
         this.setState({providers: providers.map(data => {
           return {
-            id: data.providerId,
+            id: data.id,
             name: data.name,
             rate: data.rate,
             fees: data.fees,
             hiddenFees: this.hiddenFees(data.midmarketRate, data.rate, amount),
-            amount: data.targetAmount,
+            amount: amount,
             maxFee: maxFee,
-            collectedAt: data.upperDateCollected
+            collectedAt: data.dateCollected
           }
         }), loading: false});
       })
-      .catch(e => this.setState({error: true, loading: false}))
+      .catch(e => {
+        this.setState({error: true, loading: false});
+        throw e;
+      })
   }
 
   renderError() {

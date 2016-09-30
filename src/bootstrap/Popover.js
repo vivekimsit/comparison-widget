@@ -23,8 +23,6 @@ export default class Popover extends Component {
     const wrapperPosition = this.refs.wrapper.getBoundingClientRect();
     const popoverPosition = this.refs.popover.getBoundingClientRect();
 
-    console.log(wrapperPosition)
-
     this.setState({
       active: true,
       top: wrapperPosition.top + window.scrollY,

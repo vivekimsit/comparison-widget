@@ -1,4 +1,5 @@
-const API_URL = 'https://api.transferwise.com/v1/comparisons';
+const API_URL = 'https://api.transferwise.com/v1';
+
 const AUTH_HEADERS = {
   'Content-type': 'application/json',
   'Authorization': 'Basic YjRhODM3MWUtZTE3Yi00NTIzLWE2MDgtMGMwNDFmYTBiOTRlOjEwMjIxNDFhLTliZGMtNDNkZS1hZGU0LWVlMzQ4OGNiNmNhZQ=='
@@ -12,5 +13,5 @@ function request(path) {
 }
 
 export function providersFor(source, target, amount) {
-    return request('/providers?source=' + source + '&target=' + target + '&amount=' + amount);
+    return request('/comparisons?source=' + source + '&target=' + target + '&amount=' + amount + '&exactThresholds=true&includeGoogle=false');
 }
