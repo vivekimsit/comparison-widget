@@ -31,19 +31,14 @@ export default class Comparison extends Component {
     this.loadProviders(nextProps.amount);
   }
 
-  hiddenFees = (midmarketRate, providerRate, amount) => {
-    return (midmarketRate - providerRate) * amount;
-  }
-
   maxFee = (providers, amount) => {
-    return Math.max.apply(null, providers.map(p => p.fees + this.hiddenFees(p.midmarketRate, p.rate, amount)));
+    return Math.max.apply(null, providers.map(p => p.fees + p.hiddenFees));
   }
 
   loadProviders(amount) {
     providersFor(this.props.source, this.props.target, amount)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         const providers = this.props.filter ?
           json.providers.filter(p => p.name.includes(this.props.filter) || p.name === 'TransferWise') :
           json.providers;
@@ -56,8 +51,8 @@ export default class Comparison extends Component {
             name: data.name,
             rate: data.rate,
             fees: data.fees,
-            hiddenFees: this.hiddenFees(data.midmarketRate, data.rate, amount),
-            amount: amount,
+            hiddenFees: data.hiddenFees,
+            amount: data.receivedAmount,
             maxFee: maxFee,
             collectedAt: data.dateCollected
           }
