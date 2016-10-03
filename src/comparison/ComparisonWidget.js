@@ -9,7 +9,7 @@ const AMOUNTS = [500, 1000, 5000, 10000];
 
 export default class ComparisonWidget extends Component {
   state = {
-    amount: AMOUNTS[0]
+    amount: this.props.amount || AMOUNTS[0]
   };
 
   changeAmount = (amount) => this.setState({amount});
