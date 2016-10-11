@@ -12,6 +12,10 @@ function request(path) {
   });
 }
 
-export function providersFor(source, target, amount) {
-    return request('/comparisons?source=' + source + '&target=' + target + '&amount=' + amount + '&exactThresholds=true&includeGoogle=false');
+export function comparisonsFor(source, target, amount) {
+    return request('/comparisons?source=' + source + '&target=' + target + '&amount=' + amount + '&includeGoogle=false');
+}
+
+export function providersFor(source, target) {
+    return request('/comparisons/providers?source=' + source + '&target=' + target);
 }

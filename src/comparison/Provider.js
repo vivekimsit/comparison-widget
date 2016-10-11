@@ -21,7 +21,7 @@ export default class Provider extends Component {
   }
 
   render() {
-    const barWidth = ((((this.props.hiddenFees + this.props.fees) / this.props.maxFee) * 100) + 40) * 0.45;
+    const barWidth = (((this.props.hiddenFees + this.props.fees) / this.props.maxFee) * 100) * 0.5;
     const feeBarWidth = (this.props.fees / (this.props.hiddenFees + this.props.fees) * 100);
     const title = this.popoverTitle();
     const fetched = <span>Fetched on: <Datetime date={this.props.collectedAt}/></span>
@@ -35,8 +35,8 @@ export default class Provider extends Component {
         <td className="hidden-xs hidden-sm">
           <div className="m-t-3">
             <Popover trigger="hover" title={title} content={fetched}>
-              <div className="progress progress-lg" style={{position: 'relative', width: barWidth + '%', verticalAlign: 'middle'}}>
-                {(feeBarWidth < 80) ? <span className="p-r-1 hidden-text">hidden</span> : null}
+              <div className="progress progress-lg" style={{position: 'relative', width: barWidth + '%', verticalAlign: 'middle', minWidth: '35px'}}>
+                {feeBarWidth < 10 ? <span className="p-r-1 hidden-text">hidden</span> : null}
                 {parseFloat(this.props.fees) > 0 ?
                   <div className="progress-bar" style={{width: feeBarWidth + '%'}}>
                     <span className="m-l-1 pull-left">upfront</span>
