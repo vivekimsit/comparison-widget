@@ -15,9 +15,15 @@ export default class Comparison extends Component {
     error: false
   };
 
-  showMore = () => this.setState({showMore: true});
+  showMore = (e) => {
+    e.preventDefault();
+    this.setState({showMore: true});
+  }
 
-  showLess = () => this.setState({showMore: false});
+  showLess = (e) => {
+    e.preventDefault();
+    this.setState({showMore: false});
+  }
 
   componentDidMount() {
     this.loadProviders(this.props.amount);

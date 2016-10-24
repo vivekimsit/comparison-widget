@@ -12,7 +12,10 @@ export default class Select extends Component {
     return this.props.options[Object.keys(this.props.options)[0]];
   }
 
-  openDropdown = () => setTimeout(() => this.setState({open: true}), 10);
+  openDropdown = (e) => {
+    e.preventDefault();
+    setTimeout(() => this.setState({open: true}), 10);
+  }
 
   select = (value) => {
     this.setState({
@@ -24,7 +27,6 @@ export default class Select extends Component {
   }
 
   closeDropdown = (e)  => {
-    e.preventDefault();
     if (this.state.open) {
       this.setState({open: false});
     }

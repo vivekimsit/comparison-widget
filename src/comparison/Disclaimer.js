@@ -13,11 +13,13 @@ export default class Disclaimer extends Component {
     providers: []
   }
 
-  clear = () => {
+  clear = (e) => {
+    e.preventDefault();
     this.setState({providers: []});
   }
 
-  loadProviders = () => {
+  loadProviders = (e) => {
+    e.preventDefault();
     this.setState({loading: true});
     providersFor(this.props.source, this.props.target)
       .then(response => response.json())
