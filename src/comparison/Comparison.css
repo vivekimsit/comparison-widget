@@ -17,13 +17,17 @@
 }
 
 .Comparison .progress {
-  cursor: help;
   margin: 0;
+}
+
+.Comparison .help-cursor {
+  cursor: help;
 }
 
 .Comparison th,
 .Comparison table {
   border-bottom: 1px solid #e2e6e8 !important;
+  background-color: transparent !important;
 }
 
 .Comparison .progress {

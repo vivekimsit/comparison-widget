@@ -94,12 +94,12 @@ export default class Comparison extends Component {
 
     const providers = this.state.showMore ? this.state.providers : this.state.providers.slice(0, 3);
     return (
-      <div className="table-responsive col-xs-12 col-sm-12 col-xl-12 p-x-0" style={{position: 'static'}}>
+      <div className="table-responsive col-xs-12 col-sm-12 col-xl-10 p-x-0" style={{position: 'static'}}>
         <table className="table">
           <tbody>
             <tr>
               <th>Provider</th>
-              <th className="text-xs-right hidden-xs text-md-left">Total cost</th>
+              <th className="text-xs-right hidden-xs text-md-left">Total cost for sending {this.props.amount} {this.props.source} to {this.props.target}</th>
               <th className="text-xs-right">Amount received</th>
             </tr>
           </tbody>
@@ -120,15 +120,15 @@ export default class Comparison extends Component {
       <div>
         {this.renderTable()}
 
-        <div className="text-xs-center m-b-3">
+        <div className="col-xl-10 text-xs-center m-b-3">
           {!this.state.showMore && trimmed ?
           <a href="" onClick={this.showMore}>
-              Show more providers <span className="caret"></span>
+              Show more providers <span className="icon icon-down"></span>
           </a> : null}
 
           {this.state.showMore ?
           <a href="" onClick={this.showLess}>
-              Show less providers <span className="caret"></span>
+              Show less providers <span className="icon icon-up"></span>
           </a> : null}
         </div>
 
