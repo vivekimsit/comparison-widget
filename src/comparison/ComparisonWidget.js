@@ -26,13 +26,13 @@ export default class ComparisonWidget extends Component {
       <div className="Comparison">
           <div className="container">
             <div className="row text-xs-center">
-                <h2 className="col-xs-12 col-sm-12 col-xl-10">
+                <h2 className="col-xs-12 col-sm-12 col-xl-12">
                     The true cost for sending
                     <br/>
                     <Select onChange={this.changeAmount} options={this.generateAmountOptions()} value={this.props.amount}/> to {this.props.target}
                 </h2>
 
-                <div className="col-xs-12 col-sm-offset-2 col-xl-offset-1 col-sm-8 m-t-3">
+                <div className="col-xs-12 col-sm-offset-2 col-sm-8 m-t-3">
                   <p className="small">TransferWise uses the REAL exchange rate and charges a low, transparent fee. That's why it's cheaper. It's only fair. It's your money.</p>
                 </div>
             </div>
