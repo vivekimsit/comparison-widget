@@ -52,6 +52,7 @@ export default class Comparison extends Component {
           return {
             id: data.id,
             name: data.name,
+            logo: data.logo,
             rate: data.rate,
             fees: data.fees,
             hiddenFees: data.hiddenFees,
@@ -105,7 +106,7 @@ export default class Comparison extends Component {
           </tbody>
           <tbody>
             {providers.map(p => {
-              return <Provider key={p.id} name={p.name} fees={p.fees} rate={p.rate} hiddenFees={p.hiddenFees} maxFee={p.maxFee} source={this.props.source} target={this.props.target} amount={p.amount} collectedAt={p.collectedAt}/>
+              return <Provider key={p.id} name={p.name} logo={p.logo} fees={p.fees} rate={p.rate} hiddenFees={p.hiddenFees} maxFee={p.maxFee} source={this.props.source} target={this.props.target} amount={p.amount} collectedAt={p.collectedAt}/>
             })}
           </tbody>
         </table>
