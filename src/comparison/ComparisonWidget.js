@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 import Select from '../bootstrap/Select';
 
-import Comparison from './Comparison';
-import './Comparison.css';
+import Comparison from 'comparison-widget-core';
+
+import './ComparisonWidget.css';
 
 const AMOUNTS = [500, 1000, 5000, 10000];
 
@@ -23,7 +24,7 @@ export default class ComparisonWidget extends Component {
 
   render() {
     return (
-      <div className="Comparison">
+      <div>
           <div className="container">
             <div className="row text-xs-center">
                 <h2 className="col-xs-12 col-sm-12 col-xl-12">
