@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.Select a {
+  text-decoration: none;
+}
+
 .Select .dropdown-toggle {
   font-weight: normal;
   display: inline-block;
