@@ -2,7 +2,7 @@
 
 Comparison widget bundled with everything necessary for usage on pure JS context.
 
-The comparison table that this widget imports comes from [comparison-widget-core](https://github.com/transferwise/comparison-widget-core) repo.
+The comparison table that this widget imports comes from [comparison-components](https://github.com/transferwise/comparison-components) repo.
 
 ### Install
 

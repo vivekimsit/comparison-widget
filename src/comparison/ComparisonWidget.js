@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Select from '../bootstrap/Select';
 
-import Comparison from 'comparison-widget-core';
+import { ComparisonTable } from 'comparison-components';
 
 import './ComparisonWidget.css';
 
@@ -38,7 +38,12 @@ export default class ComparisonWidget extends Component {
                 </div>
             </div>
 
-            <Comparison source={this.props.source} target={this.props.target} amount={this.state.amount} filter={this.props.filter || null} />
+            <ComparisonTable
+              source={this.props.source}
+              target={this.props.target}
+              amount={this.state.amount}
+              filter={this.props.filter || null}
+            />
         </div>
       </div>
     );
