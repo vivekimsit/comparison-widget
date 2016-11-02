@@ -3,3 +3,4 @@ coverage
 build
 .DS_Store
 npm-debug.log
+yarn.lock

@@ -1,5 +1,9 @@
 # Comparison Widget in React
 
+Comparison widget bundled with everything necessary for usage on pure JS context.
+
+The comparison table that this widget imports comes from [comparison-components](https://github.com/transferwise/comparison-components) repo.
+
 ### Install
 
 Run: `npm install` to install the dependencies (i.e. bootstrap, and others required for building).
