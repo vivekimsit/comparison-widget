@@ -28,11 +28,10 @@ Before making a PR make sure to run `npm run build` in order to create the `dist
 <div class="tw-comparison"
       data-source="GBP"
       data-target="EUR"
-      data-amount="<initial-amount-you-want>"
-      data-filter="<name-of-provider>"></div>
+      data-amount="<initial-amount-you-want>"></div>
 ```
 
-Note that the `data-filter` attribute is optional, and is used to create a comparison table between TransferWise and `name-of-provider`. Only one value is accepted for now, and a substring can be used (i.e. the value "western" will filter to Western Union).
+Note that the `providers` attribute is optional and takes an array as a value so it cannot be added to plain html, and is used to select the providers to be displayed in the table.
 
 3- Add the minified main javascript file in the `<body>` tag.
 ```

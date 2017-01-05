@@ -8,7 +8,7 @@ import ComparisonWidget from './comparison/ComparisonWidget';
         source={elem.getAttribute('data-source')}
         target={elem.getAttribute('data-target')}
         amount={elem.getAttribute('data-amount') || 500}
-        filter={elem.getAttribute('data-filter') || null}/>,
+        providers={elem.getAttribute('data-providers') || null}/>,
       elem
     );
   }
