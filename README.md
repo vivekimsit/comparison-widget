@@ -28,10 +28,11 @@ Before making a PR make sure to run `npm run build` in order to create the `dist
 <div class="tw-comparison"
       data-source="GBP"
       data-target="EUR"
-      data-amount="<initial-amount-you-want>"></div>
+      data-amount="<initial-amount-you-want>"
+      data-providers="<[array-of-providers]>"></div>
 ```
 
-Note that the `providers` attribute is optional and takes an array as a value so it cannot be added to plain html, and is used to select the providers to be displayed in the table.
+Note that the `providers` attribute is optional and takes an array as a value, and is used to select the providers to be displayed in the table.
 
 3- Add the minified main javascript file in the `<body>` tag.
 ```
