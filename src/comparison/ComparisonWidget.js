@@ -42,7 +42,7 @@ export default class ComparisonWidget extends Component {
               source={this.props.source}
               target={this.props.target}
               amount={this.state.amount}
-              filter={this.props.filter || null}
+              providers={this.props.providers || null}
             />
         </div>
       </div>
